@@ -1,9 +1,20 @@
+import Dashboard from "./components/Dashboard";
+import Products from "./components/Products";
+import Layout from "./components/shared/Layout";
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Dashboard />}></Route>
+          <Route path="products" element={<Products />}></Route>
+        </Route>
+        <Route path="login" element={<div>this is login page</div>}></Route>
+      </Routes>
+    </Router>
   );
 }
 
