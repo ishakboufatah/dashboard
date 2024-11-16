@@ -5,7 +5,7 @@ export default function Products() {
   return (
     <div>
       <p>this is product page</p>
-      <Link to="/">go to dashboard</Link>
+      <Link to="/dashboard">go to dashboard</Link>
     </div>
   );
 }
